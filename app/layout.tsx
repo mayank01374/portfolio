@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/data/portfolio";
-
-// UI Components
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SpotlightBackground from "@/components/SpotlightBackground"; // Ensure you created this file
+import SpotlightBackground from "@/components/SpotlightBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,23 +62,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${mono.variable} scroll-smooth`} // Added scroll-smooth
+      className={`${inter.variable} ${mono.variable} scroll-smooth`}
     >
       <body className="bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30">
-        {/* 1. Global Background Effect */}
         <SpotlightBackground />
 
-        {/* 2. Global Navbar (Persistent across pages) */}
         <Navbar />
 
-        {/* 3. Main Content Wrapper */}
-        {/* 'relative z-10' ensures content sits ABOVE the background */}
         <div className="relative z-10 flex flex-col min-h-screen">
           {children}
+          <Footer />
         </div>
-
-        {/* 4. Global Footer */}
-        <Footer />
       </body>
     </html>
   );

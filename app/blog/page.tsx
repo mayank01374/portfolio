@@ -56,7 +56,6 @@ export default function BlogIndexPage() {
             ))}
           </div>
         ) : (
-          /* Empty State */
           <div className="mt-20 flex flex-col items-center justify-center text-center p-12 rounded-3xl border border-dashed border-slate-800/50 bg-slate-900/10">
             <div className="relative mb-6">
               <div className="absolute inset-0 bg-blue-500 blur-2xl opacity-20 rounded-full" />

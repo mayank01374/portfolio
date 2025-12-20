@@ -10,7 +10,6 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    // Removed 'bg-slate-950'
     <main className="min-h-screen pt-20">
       <SectionShell
         id="projects"

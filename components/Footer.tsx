@@ -2,10 +2,7 @@ import { personalInfo } from "@/data/portfolio";
 
 export default function Footer() {
   return (
-    <footer
-      id="contact"
-      className="border-t border-slate-900 bg-slate-950 py-12"
-    >
+    <footer id="contact" className="py-12">
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold">Let’s talk</h2>

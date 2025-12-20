@@ -8,7 +8,7 @@ import gfm from "remark-gfm";
 
 export type BlogFrontmatter = {
   title: string;
-  date: string; // ISO string recommended
+  date: string; 
   excerpt: string;
   tags?: string[];
   coverImage?: string;

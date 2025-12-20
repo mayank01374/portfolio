@@ -7,7 +7,6 @@ export function Achievements() {
       id="achievements"
       title="Achievements"
       subtitle="Highlights and milestones I’m proud of."
-      // REMOVED: className="bg-slate-950"
     >
       <div className="grid md:grid-cols-2 gap-6">
         {achievements.map((a) => (

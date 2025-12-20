@@ -18,7 +18,6 @@ export default function SpotlightBackground() {
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden bg-slate-950 pointer-events-none">
-      {/* 1. Base Grid Pattern (Optional: creates a subtle texture) */}
       <div
         className="absolute inset-0 opacity-[0.15]"
         style={{
@@ -27,7 +26,6 @@ export default function SpotlightBackground() {
         }}
       />
 
-      {/* 2. The Moving Spotlight */}
       <div
         className="absolute inset-0 transition-opacity duration-300"
         style={{
@@ -35,7 +33,6 @@ export default function SpotlightBackground() {
         }}
       />
 
-      {/* 3. Static Ambient Glow (Top of screen) */}
       <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-blue-900/10 to-transparent" />
     </div>
   );

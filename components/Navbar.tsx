@@ -16,11 +16,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Helper to determine href
   const getHref = (id: string, isPage = false) => {
-    if (isPage) return `/${id}`; // Always navigate to /projects or /blog
-    if (pathname === "/") return `#${id}`; // Scroll if on home
-    return `/#${id}`; // Navigate home + scroll if elsewhere
+    if (isPage) return `/${id}`;
+    if (pathname === "/") return `#${id}`;
+    return `/#${id}`;
   };
 
   const navItems = [
@@ -29,8 +28,8 @@ export default function Navbar() {
     { label: "Achievements", href: getHref("achievements") },
     { label: "CP", href: getHref("cp") },
 
-    { label: "Projects", href: getHref("projects", true) }, // Separate Page
-    { label: "Blog", href: getHref("blog", true) }, // Separate Page
+    { label: "Projects", href: getHref("projects", true) },
+    { label: "Blog", href: getHref("blog", true) },
   ];
 
   return (
@@ -67,7 +66,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile Download Resume Shortcut */}
           <a
             href="/resume.pdf"
             download

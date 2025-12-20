@@ -9,10 +9,8 @@ export function Resume() {
       id="resume"
       title="Experience & Education"
       subtitle="My academic journey and professional career."
-      // REMOVED: className="bg-slate-950"
     >
       <div className="mx-auto max-w-5xl">
-        {/* Top Download Button */}
         <div className="flex justify-center mb-12">
           <a
             href="/resume.pdf"
@@ -24,7 +22,6 @@ export function Resume() {
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
-          {/* Work Experience */}
           <div>
             <h3 className="mb-8 text-2xl font-bold text-slate-200 flex items-center gap-2">
               <span className="text-blue-500">#</span> Work Experience
@@ -43,7 +40,6 @@ export function Resume() {
             </div>
           </div>
 
-          {/* Education */}
           <div>
             <h3 className="mb-8 text-2xl font-bold text-slate-200 flex items-center gap-2">
               <span className="text-purple-500">#</span> Education
@@ -67,7 +63,6 @@ export function Resume() {
   );
 }
 
-// Helper Component
 function TimelineItem({ title, subtitle, date, desc, logo }: any) {
   return (
     <div className="relative group">

@@ -1,7 +1,7 @@
 import SectionShell from "@/components/SectionShell";
 import { competitiveProgramming } from "@/data/portfolio";
 import { FiExternalLink, FiCode } from "react-icons/fi";
-import Image from "next/image"; // Import Image component
+import Image from "next/image";
 
 export function CompetitiveProgramming() {
   return (
@@ -20,7 +20,6 @@ export function CompetitiveProgramming() {
             className="group relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900/50 p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
           >
             <div className="flex items-center justify-between mb-4">
-              {/* Check if logo exists, otherwise fallback to FiCode */}
               {item.logo ? (
                 <div className="relative h-8 w-8 overflow-hidden rounded">
                   <Image

@@ -6,7 +6,7 @@ export const siteConfig = {
   shortTitle: "Mayank",
   description:
     "Personal website with projects, achievements, and blogs. Built with Next.js, TypeScript, and Tailwind.",
-  twitter: "@yourhandle",
+  twitter: "@",
 };
 
 export const personalInfo = {
@@ -18,7 +18,7 @@ export const personalInfo = {
   socials: [
     { icon: FiGithub, label: "GitHub", url: "https://github.com/mayank01374" },
     { icon: FiLinkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/mayankiitg35/" },
-    { icon: FiTwitter, label: "X", url: "https://x.com/yourhandle" },
+    { icon: FiTwitter, label: "X", url: "https://x.com/" },
     { icon: FiMail, label: "Email", url: "mailto:mayankiitg35@gmail.com" }
   ],
 };
