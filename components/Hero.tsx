@@ -83,7 +83,7 @@ export default function Hero() {
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
             {personalInfo.socials.map((s) => (
-              <a
+              <Link
                 key={s.url}
                 href={s.url}
                 target="_blank"
@@ -92,7 +92,7 @@ export default function Hero() {
               >
                 <s.icon className="text-lg" />
                 <span>{s.label}</span>
-              </a>
+              </Link>
             ))}
           </motion.div>
 
@@ -102,12 +102,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.36 }}
             className="mt-10"
           >
-            <a
+            <Link
               href="/blog"
               className="inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 font-medium hover:bg-blue-700 transition hover:scale-105 text-white"
             >
               Read latest posts
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>
