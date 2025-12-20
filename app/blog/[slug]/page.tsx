@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-// Removed duplicate Navbar/Footer imports
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog";
 import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
@@ -13,11 +12,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  // Await params if using Next.js 15 (though usually params is a promise in the latest types, standard access often works in 14/15 depending on config. Assuming consistent with your current setup.)
-  const resolvedParams = await Promise.resolve(params);
-  const post = await getPostBySlug(resolvedParams.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   if (!post) return {};
 
   const title = post.frontmatter.title;
@@ -26,11 +24,11 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: `/blog/${resolvedParams.slug}` },
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title,
       description,
-      url: `/blog/${resolvedParams.slug}`,
+      url: `/blog/${slug}`,
       type: "article",
       images: post.frontmatter.coverImage ? [post.frontmatter.coverImage] : [],
     },
@@ -40,18 +38,16 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const resolvedParams = await Promise.resolve(params); // Safe handling for Next 15
-  const post = await getPostBySlug(resolvedParams.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
   const { frontmatter } = post;
 
   return (
-    // Removed 'bg-slate-950'
     <main className="min-h-screen">
-      {/* Navbar is in layout.tsx */}
       <article className="pt-28 pb-16">
         <div className="container">
           <div className="mx-auto max-w-3xl">
@@ -98,7 +94,6 @@ export default async function BlogPostPage({
           </div>
         </div>
       </article>
-      {/* Footer is in layout.tsx */}
     </main>
   );
 }
