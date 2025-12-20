@@ -4,6 +4,7 @@ import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data/portfolio";
+import Link from "next/link";
 
 export default function Hero() {
   return (
