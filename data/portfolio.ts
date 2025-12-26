@@ -89,7 +89,7 @@ export const projects = [
   title: "Secret Sharer",
   desc: "A zero-knowledge platform for secure data sharing via one-time links, featuring true end-to-end encryption. Secrets are encrypted client-side with AES-256-CBC, ensuring the server never accesses plaintext data. Includes self-destruction, password protection, and audit logging within a modern, animated UI.",
   tech: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Redis", "Tailwind CSS", "Docker", "CryptoJS"],
-  link: "https://github.com/mayank01374/secret-sharer",
+  link: "https://secret-sharer.vercel.app/",
   github: "https://github.com/mayank01374/secret-sharer",
   image: "/projects/secret-sharer.png",
 },
