@@ -135,7 +135,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative w-30 h-30 md:w-72 md:h-72 flex-shrink-0 rounded-full overflow-hidden border-4 border-slate-700/50 shadow-2xl"
+            className="relative w-30 h-30 md:w-36 md:h-36 flex-shrink-0 rounded-full overflow-hidden border-4 border-slate-700/50 shadow-2xl"
           >
             <Image
               src="/photo2.png"
