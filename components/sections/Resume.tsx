@@ -14,10 +14,11 @@ export function Resume() {
         <div className="flex justify-center mb-12">
           <a
             href="/resume.pdf"
-            download="My_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium transition-all shadow-lg shadow-blue-900/20"
           >
-            <FiDownload /> Download Resume
+            <FiDownload /> View Resume
           </a>
         </div>
 
