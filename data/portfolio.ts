@@ -59,11 +59,11 @@ export const achievements = [
 export const workExperience = [
   {
     id: 1,
-    company: "Dept of EEE, IITG",
-    role: "Research Intern",
+    company: "Dr. Anirban Dasgupta, Dept of EEE, IITG",
+    role: "Machine Learning Intern",
     startDate: "May 2025",
     endDate: "Jun 2025",
-    desc: "Built responsive dashboards, improved Core Web Vitals by 40%, and migrated legacy code to React 18.",
+    desc: "Engineered an end-to-end facial expression recognition pipeline in PyTorch, architecting a custom VGGNet-style CNN that achieved 75% accuracy, outperforming classical SVM baselines by 11%",
     logo: "/logos/iitg.png",
   },
   
